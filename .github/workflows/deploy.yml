@@ -50,6 +50,11 @@ jobs:
         run: |
           npm ci --no-audit --no-fund
 
+      - name: Install platform-specific dependencies
+        run: |
+          # Force reinstall lightningcss to ensure correct platform binary
+          npm rebuild lightningcss --no-audit || echo "lightningcss rebuild failed, continuing..."
+
       - name: Clean previous builds
         run: |
           rm -rf .next out
