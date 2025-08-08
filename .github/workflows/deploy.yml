@@ -24,13 +24,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "23"
+          node-version: "23.3.0"
           cache: npm
 
       - name: Check Node and npm versions
         run: |
+          echo "Node.js version:"
           node --version
+          echo "npm version:"
           npm --version
+          echo "Platform info:"
+          uname -a
+          echo "Environment variables:"
+          env | grep NODE || echo "No NODE env vars"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -48,15 +54,31 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Ensure we're using the project's lockfile
-          npm ci --no-audit --no-fund --prefer-offline
+          # Clean install with locked versions
+          npm ci --no-audit --no-fund
 
-      - name: Install platform-specific dependencies
+      - name: Fix Lightning CSS for Node.js 23
         run: |
-          # Force reinstall lightningcss to ensure correct platform binary
-          npm rebuild lightningcss --no-audit || echo "lightningcss rebuild failed, continuing..."
-          # Also rebuild any other platform-specific packages
-          npm rebuild --no-audit || echo "Package rebuild completed"
+          # Check if lightningcss binary exists
+          if [ ! -f "node_modules/lightningcss/lightningcss.linux-x64-gnu.node" ]; then
+            echo "Lightning CSS binary missing, attempting to fix..."
+            
+            # Try to reinstall lightningcss specifically
+            npm install lightningcss@latest --no-audit --no-fund || echo "lightningcss install failed"
+            
+            # If still missing, try to rebuild
+            npm rebuild lightningcss --no-audit || echo "lightningcss rebuild failed"
+            
+            # Final check
+            if [ ! -f "node_modules/lightningcss/lightningcss.linux-x64-gnu.node" ]; then
+              echo "Still missing lightningcss binary, but continuing..."
+              ls -la node_modules/lightningcss/ || echo "lightningcss directory not found"
+            else
+              echo "✅ Lightning CSS binary found"
+            fi
+          else
+            echo "✅ Lightning CSS binary already exists"
+          fi
 
       - name: Clean previous builds
         run: |
@@ -64,8 +86,24 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          npm run build
-          echo "Build completed successfully"
+          # Set environment variables for better error reporting
+          export NODE_ENV=production
+          export NEXT_TELEMETRY_DISABLED=1
+
+          # Try the build
+          npm run build || {
+            echo "❌ Build failed, investigating..."
+            echo "Checking Next.js version:"
+            npx next --version
+            echo "Checking Tailwind CSS:"
+            npm list tailwindcss
+            echo "Checking Lightning CSS:"
+            npm list lightningcss
+            echo "Node modules structure:"
+            ls -la node_modules/ | head -20
+            exit 1
+          }
+          echo "✅ Build completed successfully"
 
       - name: List build output
         run: ls -la ./
