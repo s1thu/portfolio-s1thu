@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center gap-12 px-6 pt-20 max-w-6xl mx-auto bg-bg-primary text-text-primary min-h-screen">
+    <section className="relative flex flex-col md:flex-row items-center justify-center gap-12 px-6 max-w-6xl mx-auto bg-bg-primary text-text-primary h-screen">
       {/* Photo */}
       <div className="w-60 h-60 rounded-full overflow-hidden ring-4 ring-accent/20 hover:ring-accent/40 transition-all duration-300">
         <Image

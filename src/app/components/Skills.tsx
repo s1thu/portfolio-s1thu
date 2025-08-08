@@ -2,11 +2,12 @@
 
 import {
   FaReact,
-  FaNodeJs,
+  FaGithub,
   FaGitAlt,
   FaDocker,
-  FaLinux,
   FaJava,
+  FaVuejs,
+  FaAws,
 } from "react-icons/fa";
 import {
   SiGo,
@@ -14,11 +15,21 @@ import {
   SiJavascript,
   SiPostgresql,
   SiMongodb,
-  SiRedis,
-  SiKubernetes,
   SiNextdotjs,
+  SiC,
+  SiPhp,
+  SiGithubactions,
+  SiGithub,
+  SiDocker,
+  SiReact,
+  SiBootstrap,
+  SiSpringboot,
+  SiVuedotjs,
+  SiMysql,
+  SiSubversion,
 } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
+import { BiSolidFolder } from "react-icons/bi";
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,97 +64,56 @@ export default function Skills() {
     {
       title: "Languages",
       skills: [
-        { name: "Go", icon: <SiGo className="text-accent" />, level: 90 },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript className="text-warning" />,
-          level: 85,
-        },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="text-primary" />,
-          level: 80,
-        },
-        {
-          name: "Java",
-          icon: <FaJava className="text-orange-500" />,
-          level: 75,
-        },
+        { name: "Go", icon: <SiGo className="text-accent" /> },
+        { name: "Java", icon: <FaJava className="text-orange-500" /> },
+        { name: "JavaScript", icon: <SiJavascript className="text-warning" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-primary" /> },
+        { name: "C", icon: <SiC className="text-blue-500" /> },
+        { name: "PHP", icon: <SiPhp className="text-purple-500" /> },
       ],
     },
     {
-      title: "Frontend",
+      title: "Frameworks",
       skills: [
         {
-          name: "React.js",
-          icon: <FaReact className="text-accent" />,
-          level: 85,
+          name: "Spring Boot",
+          icon: <SiSpringboot className="text-green-500" />,
         },
+        {
+          name: "Spring Security",
+          icon: <SiSpringboot className="text-green-500" />,
+        },
+        { name: "React.js", icon: <SiReact className="text-accent" /> },
         {
           name: "Next.js",
           icon: <SiNextdotjs className="text-text-primary" />,
-          level: 80,
         },
+        { name: "Vue.js", icon: <SiVuedotjs className="text-green-500" /> },
         {
-          name: "HTML/CSS",
-          icon: <div className="text-orange-500">🌐</div>,
-          level: 90,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <div className="text-accent">💨</div>,
-          level: 85,
+          name: "Bootstrap",
+          icon: <SiBootstrap className="text-purple-500" />,
         },
       ],
     },
     {
-      title: "Backend",
+      title: "Database",
       skills: [
-        {
-          name: "Node.js",
-          icon: <FaNodeJs className="text-success" />,
-          level: 80,
-        },
-        {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="text-primary" />,
-          level: 75,
-        },
-        {
-          name: "MongoDB",
-          icon: <SiMongodb className="text-success" />,
-          level: 70,
-        },
-        {
-          name: "Redis",
-          icon: <SiRedis className="text-red-500" />,
-          level: 65,
-        },
+        { name: "MySQL", icon: <SiMysql className="text-orange-500" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-primary" /> },
       ],
     },
     {
       title: "DevOps & Tools",
       skills: [
+        { name: "Docker", icon: <SiDocker className="text-accent" /> },
+        { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+        { name: "GitHub", icon: <SiGithub className="text-gray-700" /> },
         {
-          name: "Docker",
-          icon: <FaDocker className="text-accent" />,
-          level: 80,
+          name: "GitHub Actions",
+          icon: <SiGithubactions className="text-purple-500" />,
         },
-        {
-          name: "Kubernetes",
-          icon: <SiKubernetes className="text-primary" />,
-          level: 70,
-        },
-        {
-          name: "Git",
-          icon: <FaGitAlt className="text-orange-500" />,
-          level: 85,
-        },
-        {
-          name: "Linux",
-          icon: <FaLinux className="text-text-primary" />,
-          level: 80,
-        },
+        { name: "AWS", icon: <FaAws className="text-orange-400" /> },
+        { name: "SVN", icon: <BiSolidFolder className="text-blue-500" /> },
       ],
     },
   ];
@@ -152,57 +122,48 @@ export default function Skills() {
     <section
       ref={sectionRef}
       id="skills"
-      className="py-20 px-6 bg-bg-secondary"
+      className="py-12 px-6 bg-bg-secondary min-h-screen flex flex-col justify-center"
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-text-primary mb-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-text-primary mb-3">
             Technical Skills
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-text-secondary text-base max-w-2xl mx-auto">
             Here are the technologies and tools I work with to bring ideas to
             life
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className="bg-bg-tertiary rounded-lg p-6 border border-border hover:border-accent/50 transition-all duration-300"
+              className="bg-bg-tertiary rounded-lg p-4 border border-border hover:border-accent/50 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-text-primary mb-6 text-center">
+              <h3 className="text-lg font-semibold text-text-primary mb-4 text-center">
                 {category.title}
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <div className="text-xl">{skill.icon}</div>
-                      <span className="text-text-secondary font-medium">
-                        {skill.name}
-                      </span>
-                    </div>
-
-                    {/* Skill Level Bar */}
-                    <div className="w-full bg-bg-primary rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : "0%",
-                          transitionDelay: `${
-                            categoryIndex * 0.2 + skillIndex * 0.1
-                          }s`,
-                        }}
-                      />
-                    </div>
-
-                    <div className="text-right">
-                      <span className="text-xs text-text-muted">
-                        {skill.level}%
-                      </span>
-                    </div>
+                  <div
+                    key={skill.name}
+                    className={`flex items-center gap-3 p-2 rounded-lg bg-bg-primary hover:bg-bg-secondary transition-all duration-300 ${
+                      isVisible
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                    }`}
+                    style={{
+                      transitionDelay: `${
+                        categoryIndex * 0.1 + skillIndex * 0.05
+                      }s`,
+                    }}
+                  >
+                    <div className="text-lg">{skill.icon}</div>
+                    <span className="text-text-secondary font-medium text-sm">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -211,15 +172,20 @@ export default function Skills() {
         </div>
 
         {/* Additional Skills */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold text-text-primary mb-8">
-            Other Technologies & Methodologies
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-semibold text-text-primary mb-6">
+            Architectural Patterns & Concepts
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {[
-              "Microservices",
+              "MVC",
               "REST APIs",
+              "Event-driven",
+              "OOP",
+              "Multithreading",
+              "MVVM",
+              "Microservices",
               "GraphQL",
               "WebSockets",
               "Agile/Scrum",
@@ -227,14 +193,27 @@ export default function Skills() {
               "Testing",
               "Performance Optimization",
               "System Design",
-              "Multithreading",
-              "Event-Driven Architecture",
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 bg-bg-primary text-text-secondary rounded-full border border-border hover:border-accent/50 hover:text-accent transition-all duration-200"
+                className="px-3 py-1.5 bg-bg-primary text-text-secondary rounded-full border border-border hover:border-accent/50 hover:text-accent transition-all duration-200 text-sm"
               >
                 {tech}
+              </span>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-semibold text-text-primary mb-4">
+            Operating Systems
+          </h3>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {["Linux", "Windows", "macOS"].map((os) => (
+              <span
+                key={os}
+                className="px-3 py-1.5 bg-bg-primary text-text-secondary rounded-full border border-border hover:border-accent/50 hover:text-accent transition-all duration-200 text-sm"
+              >
+                {os}
               </span>
             ))}
           </div>
