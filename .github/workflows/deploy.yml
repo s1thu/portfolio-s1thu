@@ -57,32 +57,18 @@ jobs:
           # Clean install with locked versions
           npm ci --no-audit --no-fund
 
-      - name: Fix Lightning CSS for Node.js 23
-        run: |
-          # Check if lightningcss binary exists
-          if [ ! -f "node_modules/lightningcss/lightningcss.linux-x64-gnu.node" ]; then
-            echo "Lightning CSS binary missing, attempting to fix..."
-            
-            # Try to reinstall lightningcss specifically
-            npm install lightningcss@latest --no-audit --no-fund || echo "lightningcss install failed"
-            
-            # If still missing, try to rebuild
-            npm rebuild lightningcss --no-audit || echo "lightningcss rebuild failed"
-            
-            # Final check
-            if [ ! -f "node_modules/lightningcss/lightningcss.linux-x64-gnu.node" ]; then
-              echo "Still missing lightningcss binary, but continuing..."
-              ls -la node_modules/lightningcss/ || echo "lightningcss directory not found"
-            else
-              echo "✅ Lightning CSS binary found"
-            fi
-          else
-            echo "✅ Lightning CSS binary already exists"
-          fi
-
       - name: Clean previous builds
         run: |
+          # Remove any conflicting config files
+          rm -f next.config.js
           rm -rf .next out
+
+          # Ensure we have the right config file
+          if [ ! -f "next.config.ts" ]; then
+            echo "❌ next.config.ts missing!"
+            exit 1
+          fi
+          echo "✅ Using next.config.ts"
 
       - name: Build with Next.js
         run: |
@@ -90,23 +76,35 @@ jobs:
           export NODE_ENV=production
           export NEXT_TELEMETRY_DISABLED=1
 
+          echo "📝 Starting Next.js build..."
+          echo "Config file check:"
+          ls -la next.config.*
+
           # Try the build
           npm run build || {
             echo "❌ Build failed, investigating..."
             echo "Checking Next.js version:"
             npx next --version
             echo "Checking Tailwind CSS:"
-            npm list tailwindcss
-            echo "Checking Lightning CSS:"
-            npm list lightningcss
-            echo "Node modules structure:"
-            ls -la node_modules/ | head -20
+            npm list tailwindcss || echo "Tailwind not found"
+            echo "Build directory contents:"
+            ls -la .next/ || echo ".next directory not found"
             exit 1
           }
-          echo "✅ Build completed successfully"
 
-      - name: List build output
-        run: ls -la ./
+          echo "✅ Build completed successfully"
+          echo "Checking for out directory..."
+          if [ -d "./out" ]; then
+            echo "✅ out directory created successfully"
+            echo "Contents:"
+            ls -la ./out | head -10
+          else
+            echo "❌ out directory not created by build"
+            echo "Checking .next directory:"
+            ls -la .next/ || echo ".next not found"
+            echo "Checking if this is an export build:"
+            grep -i "export" next.config.ts || echo "export not found in config"
+          fi
 
       - name: Check if out directory exists
         run: |
