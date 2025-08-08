@@ -1,14 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig: import("next").NextConfig = {
+  /* config options here */
   output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // Remove basePath and assetPrefix for custom domain root deployment
-  // basePath: process.env.NODE_ENV === "production" ? "/portfolio-s1thu" : "",
-  // assetPrefix: process.env.NODE_ENV === "production" ? "/portfolio-s1thu/" : "",
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
