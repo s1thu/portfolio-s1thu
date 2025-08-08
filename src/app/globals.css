@@ -1,33 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  /* Primary Colors - Modern Blue Gradient */
-  --color-primary: #2563eb; /* Professional blue */
-  --color-primary-dark: #1d4ed8; /* Darker blue for hover states */
-  --color-secondary: #64748b; /* Cool gray for secondary text */
-
-  /* Accent Colors */
-  --color-accent: #06b6d4; /* Cyan for highlights */
-  --color-success: #10b981; /* Green for success states */
-  --color-warning: #f59e0b; /* Amber for warnings */
-
-  /* Background Colors - Dark Theme */
-  --color-bg-primary: #0f172a; /* Dark slate - main background */
-  --color-bg-secondary: #1e293b; /* Lighter slate - cards, nav */
-  --color-bg-tertiary: #334155; /* Even lighter - hover states */
-
-  /* Text Colors */
-  --color-text-primary: #f8fafc; /* Almost white - main text */
-  --color-text-secondary: #cbd5e1; /* Light gray - secondary text */
-  --color-text-muted: #94a3b8; /* Gray - muted text */
-
-  /* Border Colors */
-  --color-border: #475569; /* Slate gray for borders */
-  --color-border-light: #64748b; /* Lighter borders */
-
-  /* Font */
-  --font-family-sans: "Inter", sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -42,8 +15,8 @@
 }
 
 body {
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background: #0f172a;
+  color: #f8fafc;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   scroll-behavior: smooth;
