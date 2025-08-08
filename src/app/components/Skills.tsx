@@ -1,20 +1,11 @@
 "use client";
 
-import {
-  FaReact,
-  FaGithub,
-  FaGitAlt,
-  FaDocker,
-  FaJava,
-  FaVuejs,
-  FaAws,
-} from "react-icons/fa";
+import { FaGitAlt, FaJava, FaAws } from "react-icons/fa";
 import {
   SiGo,
   SiTypescript,
   SiJavascript,
   SiPostgresql,
-  SiMongodb,
   SiNextdotjs,
   SiC,
   SiPhp,
@@ -26,7 +17,6 @@ import {
   SiSpringboot,
   SiVuedotjs,
   SiMysql,
-  SiSubversion,
 } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 import { BiSolidFolder } from "react-icons/bi";
