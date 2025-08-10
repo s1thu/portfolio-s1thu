@@ -46,7 +46,7 @@ export default function Projects() {
             My Projects
           </h2>
           <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-            Here are some of the projects I've worked on, showcasing my
+            Here are some of the projects I&apos;ve worked on, showcasing my
             experience in full-stack development, system architecture, and
             problem-solving.
           </p>
@@ -74,8 +74,8 @@ export default function Projects() {
               More Projects Coming Soon
             </h3>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              I'm constantly working on new projects and exploring emerging
-              technologies. Some projects are private or under NDA, but I'm
+              I&apos;m constantly working on new projects and exploring emerging
+              technologies. Some projects are private or under NDA, but I&apos;m
               excited to share more of my work as it becomes available.
             </p>
           </div>

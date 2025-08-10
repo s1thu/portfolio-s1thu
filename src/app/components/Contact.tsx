@@ -76,12 +76,12 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-            I'm always interested in hearing about new opportunities, projects,
-            or just having a conversation about technology. Feel free to reach
-            out!
+            I&apos;m always interested in hearing about new opportunities,
+            projects, or just having a conversation about technology. Feel free
+            to reach out!
           </p>
         </div>
 
@@ -100,8 +100,8 @@ export default function Contact() {
               </h3>
               <p className="text-text-secondary mb-8 leading-relaxed">
                 Whether you have a project in mind, want to discuss
-                opportunities, or just want to say hello, I'd love to hear from
-                you. I typically respond within 24 hours.
+                opportunities, or just want to say hello, I&apos;d love to hear
+                from you. I typically respond within 24 hours.
               </p>
             </div>
 
@@ -179,7 +179,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-medium text-text-primary mb-2">
-                    What I'm Looking For:
+                    What I&apos;m Looking For:
                   </h4>
                   <ul className="space-y-2 text-text-secondary">
                     <li className="flex items-start gap-2">
@@ -203,7 +203,7 @@ export default function Contact() {
 
                 <div>
                   <h4 className="text-lg font-medium text-text-primary mb-2">
-                    Let's Discuss:
+                    Let&apos;s Discuss:
                   </h4>
                   <ul className="space-y-2 text-text-secondary">
                     <li className="flex items-start gap-2">
@@ -212,7 +212,7 @@ export default function Contact() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      Technical challenges you're facing
+                      Technical challenges you&apos;re facing
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
@@ -223,7 +223,7 @@ export default function Contact() {
 
                 <div className="pt-4 border-t border-border">
                   <p className="text-text-secondary text-center">
-                    I'm currently{" "}
+                    I&apos;m currently{" "}
                     <span className="text-accent font-medium">available</span>{" "}
                     for new opportunities
                   </p>

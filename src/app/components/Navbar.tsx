@@ -23,7 +23,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full px-6 py-4 flex items-center justify-between relative z-10 shadow-lg bg-bg-secondary border-b border-border fixed top-0 left-0 right-0">
+    <nav className="w-full px-6 py-4 flex items-center justify-between z-10 shadow-lg bg-bg-secondary border-b border-border fixed top-0 left-0 right-0">
       <Link
         href="/"
         className="text-2xl font-semibold tracking-tight text-text-primary hover:text-accent transition-colors"

@@ -71,8 +71,9 @@ export default function About() {
             About Me
           </h2>
           <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-            I'm a passionate software engineer who loves creating efficient,
-            scalable solutions and turning complex problems into elegant code.
+            I&apos;m a passionate software engineer who loves creating
+            efficient, scalable solutions and turning complex problems into
+            elegant code.
           </p>
         </div>
 
@@ -99,8 +100,9 @@ export default function About() {
               <p className="text-text-secondary leading-relaxed">
                 I specialize in modernizing legacy systems, having successfully
                 rewritten C-based schedulers into event-driven Go applications
-                with real-time capabilities. I'm also experienced in delivering
-                cross-platform automation tools and enterprise integrations.
+                with real-time capabilities. I&apos;m also experienced in
+                delivering cross-platform automation tools and enterprise
+                integrations.
               </p>
             </div>
 
@@ -109,11 +111,11 @@ export default function About() {
                 What Drives Me
               </h3>
               <p className="text-text-secondary leading-relaxed">
-                I'm motivated by the challenge of creating clean, efficient code
-                that solves real-world problems. Whether it's optimizing
-                performance, implementing new features, or mentoring team
-                members, I approach every project with dedication and attention
-                to detail.
+                I&apos;m motivated by the challenge of creating clean, efficient
+                code that solves real-world problems. Whether it&apos;s
+                optimizing performance, implementing new features, or mentoring
+                team members, I approach every project with dedication and
+                attention to detail.
               </p>
             </div>
           </div>
@@ -153,9 +155,9 @@ export default function About() {
               Currently Looking For
             </h3>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              I'm open to new opportunities where I can contribute my skills in
-              full-stack development, system architecture, and team
-              collaboration. Let's build something amazing together!
+              I&apos;m open to new opportunities where I can contribute my
+              skills in full-stack development, system architecture, and team
+              collaboration. Let&apos;s build something amazing together!
             </p>
           </div>
         </div>
