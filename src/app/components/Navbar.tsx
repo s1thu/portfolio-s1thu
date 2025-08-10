@@ -15,10 +15,11 @@ export default function Navbar() {
   };
 
   const navigationItems = [
-    { name: "skills", type: "scroll" },
-    { name: "about", type: "page" },
-    { name: "projects", type: "page" },
-    { name: "contact", type: "page" },
+    { name: "home" },
+    { name: "skills" },
+    { name: "about" },
+    { name: "projects" },
+    { name: "contact" },
   ];
 
   return (
@@ -33,26 +34,15 @@ export default function Navbar() {
 
       {/* Desktop menu */}
       <div className="hidden md:flex space-x-8 text-text-secondary font-medium">
-        {navigationItems.map((item) =>
-          item.type === "scroll" ? (
-            <button
-              key={item.name}
-              onClick={() => handleScrollToSection(item.name)}
-              className="capitalize hover:text-accent hover:underline underline-offset-4 transition-colors duration-200 cursor-pointer"
-            >
-              {item.name}
-            </button>
-          ) : (
-            <Link
-              key={item.name}
-              href={`/${item.name}`}
-              className="capitalize hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          )
-        )}
+        {navigationItems.map((item) => (
+          <button
+            key={item.name}
+            onClick={() => handleScrollToSection(item.name)}
+            className="capitalize hover:text-accent hover:underline underline-offset-4 transition-colors duration-200 cursor-pointer"
+          >
+            {item.name}
+          </button>
+        ))}
       </div>
 
       {/* Mobile hamburger */}
@@ -67,26 +57,15 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-bg-secondary shadow-lg border-b border-border flex flex-col items-center space-y-4 py-6 md:hidden z-20">
-          {navigationItems.map((item) =>
-            item.type === "scroll" ? (
-              <button
-                key={item.name}
-                onClick={() => handleScrollToSection(item.name)}
-                className="capitalize text-lg text-text-secondary hover:text-accent transition-colors duration-200 cursor-pointer"
-              >
-                {item.name}
-              </button>
-            ) : (
-              <Link
-                key={item.name}
-                href={`/${item.name}`}
-                onClick={() => setIsOpen(false)}
-                className="capitalize text-lg text-text-secondary hover:text-accent transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            )
-          )}
+          {navigationItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleScrollToSection(item.name)}
+              className="capitalize text-lg text-text-secondary hover:text-accent transition-colors duration-200 cursor-pointer"
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
       )}
     </nav>

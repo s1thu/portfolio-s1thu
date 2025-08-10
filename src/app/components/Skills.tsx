@@ -102,7 +102,6 @@ export default function Skills() {
           name: "GitHub Actions",
           icon: <SiGithubactions className="text-purple-500" />,
         },
-        { name: "AWS", icon: <FaAws className="text-orange-400" /> },
         { name: "SVN", icon: <BiSolidFolder className="text-blue-500" /> },
       ],
     },
@@ -175,35 +174,20 @@ export default function Skills() {
               "OOP",
               "Multithreading",
               "MVVM",
-              "Microservices",
-              "GraphQL",
               "WebSockets",
               "Agile/Scrum",
               "CI/CD",
               "Testing",
               "Performance Optimization",
               "System Design",
+              "Linux",
+              "Windows",
             ].map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1.5 bg-bg-primary text-text-secondary rounded-full border border-border hover:border-accent/50 hover:text-accent transition-all duration-200 text-sm"
               >
                 {tech}
-              </span>
-            ))}
-          </div>
-
-          <h3 className="text-xl font-semibold text-text-primary mb-4">
-            Operating Systems
-          </h3>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {["Linux", "Windows", "macOS"].map((os) => (
-              <span
-                key={os}
-                className="px-3 py-1.5 bg-bg-primary text-text-secondary rounded-full border border-border hover:border-accent/50 hover:text-accent transition-all duration-200 text-sm"
-              >
-                {os}
               </span>
             ))}
           </div>
