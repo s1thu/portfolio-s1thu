@@ -120,8 +120,9 @@ export default function Footer() {
               <p>💼 linkedin.com/in/sithu5601</p>
               <p>🌍 Open to Remote Work</p>
               <Link
-                href="/cv.pdf"
-                download
+                href="https://drive.google.com/drive/folders/1B7OhnEM6m-m3wIenDhtcrtPi-cLmuC0s?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-bg-tertiary text-text-primary border border-border rounded-lg hover:border-accent/50 hover:text-accent transition-all duration-200"
               >
                 📄 Download Resume

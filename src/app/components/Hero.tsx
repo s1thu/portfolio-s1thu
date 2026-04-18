@@ -56,8 +56,8 @@ export default function Hero() {
           <li className="flex items-start gap-3">
             <span className="text-accent mt-1 flex-shrink-0">▶</span>
             <span>
-              Rewrote legacy C-based schedulers to event-driven Go applications
-              with real-time file and socket-based execution.
+              Rewrote legacy C-based schedulers to event-driven Go
+              microservices, with real-time file and socket-based execution.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -99,8 +99,9 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/cv.pdf"
-            download
+            href="https://drive.google.com/drive/folders/1B7OhnEM6m-m3wIenDhtcrtPi-cLmuC0s?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-bg-secondary text-text-primary border border-border rounded-lg hover:bg-bg-tertiary hover:scale-105 transition-all duration-200 shadow-lg text-sm sm:text-base"
           >
             <FaDownload size={18} />
