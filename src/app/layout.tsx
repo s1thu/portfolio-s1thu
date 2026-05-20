@@ -1,10 +1,10 @@
 import "./globals.css";
 import Navbar from "../app/components/Navbar";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata = {
@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`}>
       <body
-        className="bg-bg-primary text-text-primary font-sans"
+        className="bg-bg-primary text-text-primary font-mono antialiased"
         suppressHydrationWarning
       >
         <Navbar />

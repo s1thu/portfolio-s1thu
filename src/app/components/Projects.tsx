@@ -38,17 +38,21 @@ export default function Projects() {
     <section
       ref={sectionRef}
       id="projects"
-      className="py-16 px-6 bg-bg-secondary min-h-screen flex flex-col justify-center"
+      className="py-24 px-6 bg-bg-primary relative min-h-screen flex flex-col justify-center overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+      <div className="glow-spot-cyan top-20 left-20" />
+      <div className="glow-spot-violet bottom-20 right-20" />
+
+      <div className="max-w-6xl mx-auto w-full z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs mb-4 uppercase tracking-widest font-semibold">
+            <span>{"// DEPLOYED REPOSITORIES"}</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-text-primary mb-4 tracking-tight">
             My Projects
           </h2>
-          <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-            Here are some of the projects I&apos;ve worked on, showcasing my
-            experience in full-stack development, system architecture, and
-            problem-solving.
+          <p className="text-text-secondary text-sm max-w-2xl mx-auto">
+            A showcase of systems engineering, full-stack implementations, and structural problem-solving.
           </p>
         </div>
 
@@ -65,18 +69,16 @@ export default function Projects() {
 
         {/* Additional Information */}
         <div
-          className={`mt-12 text-center ${
+          className={`mt-16 text-center ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           } transition-all duration-800 delay-500`}
         >
-          <div className="bg-bg-primary rounded-lg p-8 border border-border">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">
-              More Projects Coming Soon
+          <div className="glass-panel border-border/80 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-sm font-bold text-text-primary mb-3 uppercase tracking-wider">
+              📦 Additional Operational Modules
             </h3>
-            <p className="text-text-secondary max-w-2xl mx-auto">
-              I&apos;m constantly working on new projects and exploring emerging
-              technologies. Some projects are private or under NDA, but I&apos;m
-              excited to share more of my work as it becomes available.
+            <p className="text-text-secondary text-xs max-w-2xl mx-auto leading-relaxed">
+              I am constantly developing utility systems and exploring new architectural standards. Some enterprise tools are restricted by NDAs, but I am excited to share modular packages as they become available.
             </p>
           </div>
         </div>
