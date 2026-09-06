@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
   // Add your repository name as the base path only in production
   // Replace 'your-repository-name' with your exact GitHub repo name
-  basePath: isProd ? "/your-repository-name" : "",
+  basePath: isProd ? "https://github.com/s1thu/portfolio-s1thu" : "",
 };
 
 export default nextConfig;
