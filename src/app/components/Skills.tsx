@@ -1,6 +1,13 @@
 "use client";
 
-import { FaGitAlt, FaJava, FaAws, FaLinux, FaWindows, FaShieldAlt } from "react-icons/fa";
+import {
+  FaGitAlt,
+  FaJava,
+  FaAws,
+  FaLinux,
+  FaWindows,
+  FaShieldAlt,
+} from "react-icons/fa";
 import {
   SiGo,
   SiJavascript,
@@ -16,6 +23,7 @@ import {
   SiRedis,
   SiSubversion,
   SiGin,
+  SiTypescript,
 } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 
@@ -33,7 +41,7 @@ export default function Skills() {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
     const currentRef = sectionRef.current;
@@ -57,6 +65,10 @@ export default function Skills() {
         { name: "JavaScript", icon: <SiJavascript className="text-warning" /> },
         { name: "C", icon: <SiC className="text-blue-500" /> },
         { name: "PHP", icon: <SiPhp className="text-purple-500" /> },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript className="text-blue-500" />,
+        },
       ],
     },
     {
@@ -80,7 +92,10 @@ export default function Skills() {
       skills: [
         { name: "MySQL", icon: <SiMysql className="text-orange-500" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-primary" /> },
-        { name: "Linux Server", icon: <FaLinux className="text-text-primary" /> },
+        {
+          name: "Linux Server",
+          icon: <FaLinux className="text-text-primary" />,
+        },
         { name: "Windows OS", icon: <FaWindows className="text-blue-400" /> },
       ],
     },
@@ -90,8 +105,14 @@ export default function Skills() {
         { name: "AWS", icon: <FaAws className="text-warning" /> },
         { name: "Docker", icon: <SiDocker className="text-accent" /> },
         { name: "Redis", icon: <SiRedis className="text-red-500" /> },
-        { name: "Git & GitLab", icon: <FaGitAlt className="text-orange-500" /> },
-        { name: "GitHub Actions", icon: <SiGithubactions className="text-purple-500" /> },
+        {
+          name: "Git & GitLab",
+          icon: <FaGitAlt className="text-orange-500" />,
+        },
+        {
+          name: "GitHub Actions",
+          icon: <SiGithubactions className="text-purple-500" />,
+        },
         { name: "SVN", icon: <SiSubversion className="text-blue-500" /> },
       ],
     },
@@ -115,7 +136,8 @@ export default function Skills() {
             Technical Stack
           </h2>
           <p className="text-text-secondary text-sm max-w-2xl mx-auto">
-            A directory of core technologies and operational tools that compose my development environment.
+            A directory of core technologies and operational tools that compose
+            my development environment.
           </p>
         </div>
 
@@ -144,7 +166,9 @@ export default function Skills() {
                       }s`,
                     }}
                   >
-                    <div className="text-lg group-hover:scale-110 transition-transform">{skill.icon}</div>
+                    <div className="text-lg group-hover:scale-110 transition-transform">
+                      {skill.icon}
+                    </div>
                     <span className="text-text-secondary font-medium text-xs tracking-wide">
                       {skill.name}
                     </span>

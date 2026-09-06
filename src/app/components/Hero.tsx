@@ -31,7 +31,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl sm:text-2xl text-accent font-semibold mb-6 flex items-center gap-2">
-            <span className="text-text-secondary font-normal text-lg">&gt;</span>
+            <span className="text-text-secondary font-normal text-lg">
+              &gt;
+            </span>
             <Typewriter
               words={[
                 "Software Engineer",
@@ -56,36 +58,56 @@ export default function Hero() {
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
                 <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
               </div>
-              <span className="text-xs text-text-muted select-none">sithu_win.sh</span>
+              <span className="text-xs text-text-muted select-none">
+                sithu_win.sh
+              </span>
               <span className="w-4 h-4"></span>
             </div>
 
             {/* Terminal Content */}
             <div className="p-5 font-mono text-sm leading-relaxed space-y-4">
               <div>
-                <span className="text-accent">$</span> <span className="text-primary">whoami</span>
-                <p className="text-text-secondary ml-4">sithu-win (Backend & Systems Engineer)</p>
+                <span className="text-accent">$</span>{" "}
+                <span className="text-primary">whoami</span>
+                <p className="text-text-secondary ml-4">
+                  sithu-win (Backend & Systems Engineer)
+                </p>
               </div>
 
               <div>
-                <span className="text-accent">$</span> <span className="text-primary">cat about.json</span>
+                <span className="text-accent">$</span>{" "}
+                <span className="text-primary">cat about.json</span>
                 <div className="text-text-secondary ml-4 space-y-1">
                   <p className="text-emerald-500">{`{`}</p>
                   <p className="pl-4">
-                    <span className="text-primary">&quot;experience&quot;</span>: <span className="text-warning">&quot;3+ Years&quot;</span>,
+                    <span className="text-primary">&quot;experience&quot;</span>
+                    : <span className="text-warning">&quot;4+ Years&quot;</span>
+                    ,
                   </p>
                   <p className="pl-4">
-                    <span className="text-primary">&quot;technical_stack&quot;</span>: <span className="text-warning">[&quot;Go&quot;, &quot;Java&quot;, &quot;AWS&quot;, &quot;Docker&quot;, &quot;Redis&quot;]</span>,
+                    <span className="text-primary">
+                      &quot;technical_stack&quot;
+                    </span>
+                    :{" "}
+                    <span className="text-warning">
+                      [&quot;Go&quot;, &quot;Java&quot;, &quot;AWS&quot;,
+                      &quot;Docker&quot;, &quot;Redis&quot;]
+                    </span>
+                    ,
                   </p>
                   <p className="pl-4">
-                    <span className="text-primary">&quot;specialty&quot;</span>: <span className="text-warning">&quot;Legacy system modernization (C to Go)&quot;</span>
+                    <span className="text-primary">&quot;specialty&quot;</span>:{" "}
+                    <span className="text-warning">
+                      &quot;Legacy system modernization (C to Go)&quot;
+                    </span>
                   </p>
                   <p className="text-emerald-500">{`}`}</p>
                 </div>
               </div>
 
               <div className="pt-2 border-t border-border/40 text-xs text-text-muted">
-                System uptime: 100% | Location: Bangkok, Thailand (Open to relocate)
+                System uptime: 100% | Location: Bangkok, Thailand (Open to
+                relocate)
               </div>
             </div>
           </div>
